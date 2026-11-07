@@ -1,9 +1,1 @@
-pull_request_rules:
-  - name: noop-x7v2m9kq
-    conditions:
-      - base=main
-      - label=never-applied-x7v2m9kq
-    actions:
-      label:
-        add:
-          - noop-x7v2m9kq
+{"pull_request_rules": [{"name": "chain9k2 ctrl", "conditions": ["-1<=#reviews<2"], "actions": {}}]}
