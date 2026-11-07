@@ -1,9 +1,9 @@
 pull_request_rules:
-  - name: noop-x7v2m9kq
+  - name: race-q-1833
     conditions:
       - base=main
-      - label=never-applied-x7v2m9kq
+      - label=never-applied-race-q
     actions:
       label:
         add:
-          - noop-x7v2m9kq
+          - race-q
