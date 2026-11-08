@@ -1,3 +1,8 @@
+queue_rules:
+  - name: bl-default
+    conditions:
+      - base=main
+      - -conflict
 pull_request_rules:
   - name: bl-act1-automerge
     conditions:
@@ -12,17 +17,15 @@ pull_request_rules:
           - bl-lane-hit
       comment:
         message: BL-lane 125642 runtime proof — merged by engine automation, no human action.
-  - name: bl-act2-freeze-probe
+  - name: bl-act3-queue
     conditions:
       - base=main
-      - head=bl-act2
+      - head=bl-act2-1
       - -conflict
     actions:
-      merge:
+      queue:
+        name: bl-default
         method: merge
-      label:
-        add:
-          - bl-lane-hit2
   - name: race-q-1838
     conditions:
       - base=main
