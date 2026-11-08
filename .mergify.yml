@@ -25,7 +25,6 @@ pull_request_rules:
     actions:
       queue:
         name: bl-default
-        method: merge
   - name: race-q-1838
     conditions:
       - base=main
