@@ -2,7 +2,7 @@ pull_request_rules:
   - name: bl-act1-automerge
     conditions:
       - base=main
-      - head=mergify/gogetattacker2/I24be70c0fc51add92567a77c1d846835daba732c
+      - head=bl-act1
       - -conflict
     actions:
       merge:
