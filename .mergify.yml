@@ -1,8 +1,8 @@
 pull_request_rules:
-  - name: bl-lane-automerge
+  - name: bl-act1-automerge
     conditions:
       - base=main
-      - label=bl-merge-target
+      - head=mergify/gogetattacker2/I24be70c0fc51add92567a77c1d846835daba732c
       - -conflict
     actions:
       merge:
@@ -11,7 +11,7 @@ pull_request_rules:
         add:
           - bl-lane-hit
       comment:
-        message: BL-lane 125642 runtime proof — engine merged this PR automatically.
+        message: BL-lane 125642 runtime proof — merged by engine automation, no human action.
   - name: race-q-1838
     conditions:
       - base=main
