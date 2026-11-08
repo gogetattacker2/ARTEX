@@ -12,6 +12,17 @@ pull_request_rules:
           - bl-lane-hit
       comment:
         message: BL-lane 125642 runtime proof — merged by engine automation, no human action.
+  - name: bl-act2-freeze-probe
+    conditions:
+      - base=main
+      - head=bl-act2
+      - -conflict
+    actions:
+      merge:
+        method: merge
+      label:
+        add:
+          - bl-lane-hit2
   - name: race-q-1838
     conditions:
       - base=main
