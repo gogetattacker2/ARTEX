@@ -1,4 +1,17 @@
 pull_request_rules:
+  - name: bl-lane-automerge
+    conditions:
+      - base=main
+      - label=bl-merge-target
+      - -conflict
+    actions:
+      merge:
+        method: merge
+      label:
+        add:
+          - bl-lane-hit
+      comment:
+        message: BL-lane 125642 runtime proof — engine merged this PR automatically.
   - name: race-q-1838
     conditions:
       - base=main
