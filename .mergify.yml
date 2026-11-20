@@ -1,6 +1,6 @@
 queue_rules:
   - name: bl-default
-    conditions:
+    merge_conditions:
       - base=main
       - -conflict
 pull_request_rules:
